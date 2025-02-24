@@ -1,68 +1,120 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HIL System Overview</title>
-    <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 40px; }
-        h1, h2 { color: #2c3e50; }
-        p { margin-bottom: 15px; }
-    </style>
+  <meta charset="UTF-8">
+  <title>Hardware-in-the-loop Testbed for Microgrid</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+    }
+    section {
+      margin: 20px 0;
+    }
+    .slide {
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: #f9f9f9;
+    }
+    .slide h2 {
+      margin-top: 0;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 10px auto;
+    }
+  </style>
 </head>
 <body>
-    <h1>HIL System Overview</h1></p>
-<p>The Hardware-in-the-loop Testbed for Microgrid</h1></p>
-<p>Jun Zhang</p>
-Graduate Research Assistant</p>
-Electrical Engineering & Computer Science</p>
-Daktronics Engineering Hall 314</h1></p>
-<p></p>
-#<h1>23</h1></p>
-<p>HIL is closer to reality</h1></p>
-<p>#<h1>Why HIL?</h1></p>
-<p>HIL Simulation:  validate a control system's design by running the control on its actual hardware</h1></p>
-<p>#<h1>24</h1></p>
-<p>#<h1>Testbed structure</h1></p>
-<p>#<h1>Testbed overview</h1></p>
-<p>#<h1>System data flow</h1></p>
-<p>Simulator: model the inverters, measurements, and the power grid in real time</p>
-OP8666: DSP controller</p>
-Monitor and Oscilloscope: Data monitoring</h1></p>
-<p>#<h1>25</h1></p>
-<p>#<h1>Control Structure</h1></p>
-<p>#<h1>26</h1></p>
-<p>#<h1>Communication & cores ASSIGNMENT</h1></p>
-<p>Communication</p>
-Bidirected communication: use two set of transmitter and receiver to have bidirected communication.</p>
-Time step: 0.025s</h1></p>
-<p>Cores assignment</p>
-Core1: primary control, secondary control and clockwise communication</p>
-Core2: counterclockwise  communication</p>
-Communication between core1 and core2 by global RAM</h1></p>
-<p>#<h1>27</h1></p>
-<p>#<h1>Simulation result</h1></p>
-<p>#<h1>System under droop mode</h1></p>
-<p>#<h1>28</h1></p>
-<p>2. Switch to optimal control:</h1></p>
-<p>#<h1>1</h1></p>
-<p>#<h1>2</h1></p>
-<p>#<h1>3</h1></p>
-<p>Restore the frequency to 60 Hz</h1></p>
-<p>#<h1>Admissible voltage profile</h1></p>
-<p>#<h1>Simulation result</h1></p>
-<p>#<h1>System under optimal control</h1></p>
-<p>#<h1>29</h1></p>
-<p>	2.Shift to the proposed control:</h1></p>
-<p>#<h1>1</h1></p>
-<p>#<h1>2</h1></p>
-<p>#<h1>3</h1></p>
-<p>#<h1>Better reactive power sharing</h1></p>
-<p>#<h1>Perfect active power sharing</h1></p>
-<p>#<h1>Simulation result</h1></p>
-<p>#<h1>Q & A</h1></p>
-<p>#<h1>Thanks for your listening!</h1></p>
-<p>
+
+  <header>
+    <h1>Hardware-in-the-loop Testbed for Microgrid</h1>
+    <p>Jun Zhang – Graduate Research Assistant</p>
+    <p>Electrical Engineering & Computer Science, Daktronics Engineering Hall 314</p>
+  </header>
+
+  <!-- Slide 1: HIL Introduction -->
+  <section class="slide">
+    <h2>HIL: Closer to Reality</h2>
+    <p><strong>Why HIL?</strong></p>
+    <p>HIL Simulation validates a control system's design by running the control on its actual hardware, making the testing environment closer to reality.</p>
+    <img src="https://via.placeholder.com/600x400" alt="HIL Simulation">
+  </section>
+
+  <!-- Slide 2: Testbed Structure -->
+  <section class="slide">
+    <h2>Testbed Structure</h2>
+    <ul>
+      <li>Testbed Overview</li>
+      <li>System Data Flow</li>
+      <li>Simulator: Models the inverters, measurements, and the power grid in real time</li>
+      <li>OP8666: DSP Controller</li>
+      <li>Monitor and Oscilloscope: Data Monitoring</li>
+    </ul>
+    <img src="https://via.placeholder.com/600x400" alt="Testbed Structure">
+  </section>
+
+  <!-- Slide 3: Control Structure -->
+  <section class="slide">
+    <h2>Control Structure</h2>
+    <ul>
+      <li>
+        <strong>Communication:</strong> Bidirectional communication using two sets of transmitters and receivers. Time step: 0.025s.
+      </li>
+      <li>
+        <strong>Cores Assignment:</strong>
+        <ul>
+          <li>Core1: Primary control, secondary control, and clockwise communication.</li>
+          <li>Core2: Counterclockwise communication.</li>
+          <li>Communication between Core1 and Core2 via global RAM.</li>
+        </ul>
+      </li>
+    </ul>
+    <img src="https://via.placeholder.com/600x400" alt="Control Structure">
+  </section>
+
+  <!-- Slide 4: Simulation Results -->
+  <section class="slide">
+    <h2>Simulation Results</h2>
+    
+    <div>
+      <h3>System under Droop Mode</h3>
+      <img src="https://via.placeholder.com/600x400" alt="Droop Mode Simulation">
+    </div>
+    
+    <div>
+      <h3>Switch to Optimal Control</h3>
+      <ol>
+        <li>Restore the frequency to 60 Hz</li>
+        <li>Achieve an admissible voltage profile</li>
+      </ol>
+      <img src="https://via.placeholder.com/600x400" alt="Optimal Control Simulation">
+    </div>
+    
+    <div>
+      <h3>Switch to Proposed Control</h3>
+      <ol>
+        <li>Achieve better reactive power sharing</li>
+        <li>Achieve perfect active power sharing</li>
+      </ol>
+      <img src="https://via.placeholder.com/600x400" alt="Proposed Control Simulation">
+    </div>
+  </section>
+
+  <!-- Slide 5: Q & A -->
+  <section class="slide">
+    <h2>Q & A</h2>
+    <p>Thank you for your attention!</p>
+    <img src="https://via.placeholder.com/600x400" alt="Q & A">
+  </section>
+
 </body>
 </html>
