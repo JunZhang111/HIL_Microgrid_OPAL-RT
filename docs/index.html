@@ -36,17 +36,18 @@
 <body>
 
   <header>
-    <h1>Hardware-in-the-loop Testbed for Microgrid</h1>
-    <p>Jun Zhang – Graduate Research Assistant</p>
-    <p>Electrical Engineering & Computer Science, Daktronics Engineering Hall 314</p>
+    <h1>Hardware-in-the-loop (HIL) Testbed for Microgrid</h1>
+    <p>Author: Jun Zhang </p>
+    <p>System Location: Daktronics Engineering Hall, Microgrid Lab </p>
   </header>
 
   <!-- Slide 1: HIL Introduction -->
   <section class="slide">
-    <h2>HIL: Closer to Reality</h2>
-    <p><strong>Why HIL?</strong></p>
-    <p>HIL Simulation validates a control system's design by running the control on its actual hardware, making the testing environment closer to reality.</p>
-    <img src="https://via.placeholder.com/600x400" alt="HIL Simulation">
+    <h2>What is HIL Simulation?</h2>
+      <p>A simulation with real hardware such as controller and inverter.</p>
+    <h2>Why HIL Simulation?</h2>
+      <p>HIL is closer to reality.</p>
+    <img src="Comparison.png" alt="Comparison">
   </section>
 
   <!-- Slide 2: Testbed Structure -->
@@ -54,31 +55,54 @@
     <h2>Testbed Structure</h2>
     <ul>
       <li>Testbed Overview</li>
-      <li>System Data Flow</li>
-      <li>Simulator: Models the inverters, measurements, and the power grid in real time</li>
-      <li>OP8666: DSP Controller</li>
-      <li>Monitor and Oscilloscope: Data Monitoring</li>
+      <img src="TestbedOverview.png" alt="Testbed Overview">
+      <li>System Data Flow
+        <img src="DataFlow.png" alt="Data Flow">
+        <ul>
+          <li><strong>Simulator:</strong> Models the inverters, measurements, and the power grid in real-time manner.</li>
+          <li><strong>OP8666:</strong> DSP Controller.</li>
+          <li><strong>Monitor and Oscilloscope:</strong> Data Monitoring.</li>
+        </ul>
+      </li>
     </ul>
-    <img src="https://via.placeholder.com/600x400" alt="Testbed Structure">
   </section>
 
   <!-- Slide 3: Control Structure -->
   <section class="slide">
     <h2>Control Structure</h2>
+    <img src="OP8666.png" alt="OP8666">
+    <ul>
+        <li><strong>Zero-level control:</strong> tracks the control set points.</li>
+        <li><strong>Grid synchronization control:</strong> mitigates the impulse current when an inverter is connected to the grid.</li>
+        <li><strong>Droop control:</strong> supports the grid voltage and frequency without communication (time step: 50 𝜇s).</li>
+        <li><strong>Optimal secondary control:</strong> optimizes the system’s voltage and frequency, and achieves proportional power sharing (time step: 0.025s).</li>
+    </ul>
+  </section>
+
+  <!-- Slide 4: Bidirectional Communication-->
+  <section class="slide">
+    <h2>Bidirectional Communication</h2>
+    <img src="BidirectedComm.png" alt="BidirectedComm">
     <ul>
       <li>
-        <strong>Communication:</strong> Bidirectional communication using two sets of transmitters and receivers. Time step: 0.025s.
-      </li>
-      <li>
-        <strong>Cores Assignment:</strong>
-        <ul>
-          <li>Core1: Primary control, secondary control, and clockwise communication.</li>
-          <li>Core2: Counterclockwise communication.</li>
-          <li>Communication between Core1 and Core2 via global RAM.</li>
-        </ul>
+        <strong>Bidirectional communication:</strong>  use two sets of transmitters and receivers. One set of the ports performs counterclockwise communication while the other set performs clockwise communication. Time step: 0.025s.
       </li>
     </ul>
-    <img src="https://via.placeholder.com/600x400" alt="Control Structure">
+  </section>
+
+   <!-- Slide 4: Cores Assignment-->
+   <section class="slide">
+    <h2>Cores Assignment</h2>
+    <img src="TwoCores.png" alt="TwoCores">
+    <ul>
+      <li><strong>Problem: limited computational resources:</strong>  some tasks will be skipped if tasks cannot be done in one interval. </li>
+        <li>  <strong>Method: two-core framework:</strong>  </li>
+        <ul>
+          <li>Core1: primary control, secondary control and clockwise communication.</li>
+          <li>Core2: counterclockwise communication.</li>
+          <li>Communication between core1 and core2 by global RAM.</li>
+      </li>
+    </ul>
   </section>
 
   <!-- Slide 4: Simulation Results -->
@@ -87,34 +111,31 @@
     
     <div>
       <h3>System under Droop Mode</h3>
-      <img src="https://via.placeholder.com/600x400" alt="Droop Mode Simulation">
+      <img src="SystemUnderDroopMode.png" alt="SystemUnderDroopMode" style="width: 150%;">
     </div>
     
     <div>
       <h3>Switch to Optimal Control</h3>
-      <ol>
-        <li>Restore the frequency to 60 Hz</li>
-        <li>Achieve an admissible voltage profile</li>
-      </ol>
-      <img src="https://via.placeholder.com/600x400" alt="Optimal Control Simulation">
+      <img src="SystemUnderOptimalControl.png" alt="SystemUnderOptimalControl">
+      <img src="SystemUnderOptimalControl1.png" alt="SystemUnderOptimalControl1">
     </div>
-    
-    <div>
-      <h3>Switch to Proposed Control</h3>
-      <ol>
-        <li>Achieve better reactive power sharing</li>
-        <li>Achieve perfect active power sharing</li>
-      </ol>
-      <img src="https://via.placeholder.com/600x400" alt="Proposed Control Simulation">
-    </div>
+    <ul>
+      <li>Better active and reactive power and system frequency can be achieved.</li>
+  </li>
   </section>
 
   <!-- Slide 5: Q & A -->
-  <section class="slide">
+<!--   <section class="slide">
     <h2>Q & A</h2>
     <p>Thank you for your attention!</p>
     <img src="https://via.placeholder.com/600x400" alt="Q & A">
-  </section>
+  </section> -->
+  <p>Update: first upload 02/23/2025 </p>
+
+    <!-- Ownership Statement -->
+    <footer>
+      <p>&copy; 2025 Jun Zhang. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
