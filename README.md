@@ -6,7 +6,7 @@
 ---
 
 ## System Description
-See [system description](https://junzhang111.github.io/HIL_Microgrid_OPAL-RT/)for an overview.
+See [system description](https://junzhang111.github.io/HIL_Microgrid_OPAL-RT/) for an overview.
 
 ---
 
