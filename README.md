@@ -42,16 +42,16 @@ See [system description](https://junzhang111.github.io/HIL_Microgrid_OPAL-RT/) f
 - 2) set Op_St1 = 2 to  runs in droop mode.
 - 3) set Droop_P.flag_pri_Value = 1 to start the controller 1.
 ![DSP1 Setting](./DSPSetting1.JPG)
-![PrimaryControl](./PrimaryControl.JGP)
+![PrimaryControl](./PrimaryControl.JPG)
 - **Grid Synchronization**: Start inverters #2, #3, and #4 with grid synchronization(plug in).
 - 1) set Droop_P.idx_Value  = 2 to define the ID of second inverter. Then set Droop_P.flag_pri_Value = 1 to start the controller 2.
 ![DSPSetting2](./DSPSetting2.JPG)
-- 2) set Droop_P.idx_Value  = 3 to define the ID of second inverter. Then set Droop_P.flag_pri_Value = 1 to start the controller 2.
+- 2) set Droop_P.idx_Value  = 3 to define the ID of third inverter. Then set Droop_P.flag_pri_Value = 1 to start the controller 2.
 ![DSPSetting3](./DSPSetting3.JPG)
-- 3) set Droop_P.idx_Value  = 4 to define the ID of second inverter. Then set Droop_P.flag_pri_Value = 1 to start the controller 4.
+- 3) set Droop_P.idx_Value  = 4 to define the ID of fourth inverter. Then set Droop_P.P1_rated = 2600 Droop_P.Q1_rated = 2600 to change power rating. Set  Droop_P.flag_pri_Value = 1 to start the controller 4.
 ![DSPSetting4](./DSPSetting4.JPG)
 - Note that the grid synchronization of inverter 2,3,4 need certain time (around 10s).
 
 - **Activate Secondary Control**: Activate secondary control on all the inverters.
 set Droop_P.flag_sec_Value = 1 in controller 1 to activate secondary control. All the controller will start secondary control once the first one is activated.
-![SecondaryControl](./SecondaryControl.JGP)
+![SecondaryControl](./SecondaryControl.JPG)
