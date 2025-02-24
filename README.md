@@ -11,7 +11,7 @@ See [system description](https://junzhang111.github.io/HIL_Microgrid_OPAL-RT/) f
 
 ## Folder OPAL-RT
 - **eHStest.slx**: The model for RT-LAB with OP5707XG.
-- **VC707_2-EX-0001-3_5_0_817-eHSx128m_Gen4_C0D8FBCEC0D8FBCE-4F-31.conf**: the channel mapping file for OP5707XG. Note that two special DB 37 cables are required for splitting 32 analog channels into two 16 channels.
+- **VC707_2-EX-0001-3_5_0_817-eHSx128m_Gen4_C0D8FBCEC0D8FBCE-4F-31.conf**: the channel mapping file for OP5707XG. See the Mapping Table in block 'BIAS' of SC_Monitor for channel assignment. Note that two special DB37 cables are required. Each cable splits 32 analog channels into two 16 channels for four OP8666s.
 - **Two_Level_Inverter_params.m**: The file for system initialization.
 - **Circuit_4DG_LC.slx.xlsx**: The file for scenarios such as load changes.
 
