@@ -1,5 +1,3 @@
-# HIL System Overview
-
 ## The Hardware-in-the-loop Testbed for Microgrid
 **Author:** Jun Zhang  
 **Affiliation:** Graduate Research Assistant, Electrical Engineering & Computer Science  
@@ -7,45 +5,27 @@
 
 ---
 
-## Why HIL?
-HIL Simulation validates a control system's design by running the control on its actual hardware.
+## System Description
+See [system description](https://junzhang111.github.io/HIL_Microgrid_OPAL-RT/)for an overview.
 
 ---
 
-## Testbed Structure
-- **Simulator**: Models the inverters, measurements, and the power grid in real time.
-- **OP8666**: DSP controller.
-- **Monitor and Oscilloscope**: Data monitoring.
+## Folder Simulink
+- **slx**: The model for RT-LAB with OP5707XG.
+- **ini**: The file for initialization.
+- **Excel**: The file for load change.
 
 ---
 
-## Control Structure
-- **Primary Control**
-- **Secondary Control**
-- **Clockwise & Counterclockwise Communication**
+## DSP
+- **.map and .out**: the files for DSP controller OP8666.
 
 ---
-
-## Communication & Core Assignment
-- **Bidirectional Communication**: Two sets of transmitters and receivers.
-- **Time Step**: 0.025s.
-- **Core1**: Primary & secondary control, clockwise communication.
-- **Core2**: Counterclockwise communication.
-- **Core Communication**: Uses global RAM.
-
+## Real-time Simulation Steps (Opal-rt side)
+- **Please refer to the video on Opal-rt website**. 
 ---
+## Real-time Simulation Steps (DSP side)
+- **Black Start**: Start the inverter #1 without grid synchronization.
+- **Grid Synchronization**: Start inverters #2, #3, and #4 with grid synchronization(plug in).
+- **Activate Secondary Control**: Activate secondary control on all the inverters.
 
-## Simulation Results
-### System Under Droop Mode
-1. Switch to optimal control.
-2. Restore frequency to **60 Hz**.
-3. Achieve admissible voltage profile.
-
-### Shift to the Proposed Control
-1. Better reactive power sharing.
-2. Perfect active power sharing.
-
----
-
-## Q&A
-**Thanks for your listening!**
