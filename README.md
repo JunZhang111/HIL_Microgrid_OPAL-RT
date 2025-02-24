@@ -8,6 +8,17 @@
 See [system description](https://junzhang111.github.io/HIL_Microgrid_OPAL-RT/) for an overview.
 
 ---
+## Softwares version
+- Matlab: 2020b
+- RTLAB: 2023.1.0.533
+- CCS: V12.7.1.00001 with compiler TI v22.6.1.LTS
+---
+
+## Required Hardwares
+- OPAL-RT simulator: OP5707XG
+- DSP controller: four OP8666
+- Others: host PC, four PC to control DSP for black start and grid synchronization
+---
 
 ## Folder OPAL-RT
 - **eHStest.slx**: The model for RT-LAB with OP5707XG.
