@@ -18,8 +18,8 @@ See [system description](https://junzhang111.github.io/HIL_Microgrid_OPAL-RT/) f
 ---
 
 ## Folder DSP
-- **Droop.map and Droop.out**: the compiled code for DSP controller OP8666 on CPU1 with both primary control and secondary control. 
-- **VfController_zj_cpu3.map and VfController_zj_cpu3.out**: the compiled code for DSP controller OP8666 on CPU2 with clockwise communication. 
+- **Droop.map and Droop.out**: the compiled code for DSP CPU1 with primary control, secondary control, grid synchronization, and counterclockwise communication. 
+- **VfController_zj_cpu3.map and VfController_zj_cpu3.out**: the compiled code for DSP CPU2 with clockwise communication. 
 ---
 ## Real-time Simulation Steps (Opal-rt side)
 - **Please refer to the [RT-LAB tutorial video](https://www.opal-rt.com/opal_tutorial/startup-rtlab/) on Opal-rt website**. 
