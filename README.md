@@ -1,7 +1,6 @@
 ## The Hardware-in-the-loop Testbed for Microgrid
 **Author:** Jun Zhang  
-**Affiliation:** Graduate Research Assistant, Electrical Engineering & Computer Science  
-**Location:** Daktronics Engineering Hall 314  
+**Update:** 02/23/2025 first upload 
 
 ---
 
