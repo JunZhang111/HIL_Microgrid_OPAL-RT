@@ -37,7 +37,21 @@ See [system description](https://junzhang111.github.io/HIL_Microgrid_OPAL-RT/) f
 ---
 ## Real-time Simulation Steps (DSP side)
 - **Code Flashing**: See [page for OP8666 on Opal-rt wiki](https://opal-rt.atlassian.net/wiki/spaces/PHDGD/pages/144718233/OP8666+DSP+Controller+Board).
-- **Black Start**: Start the inverter #1 without grid synchronization.
+- **Black Start**: Start the inverter #1 without grid synchronization,:
+- 1) set Droop_DW.flag_Syn = 1 to skip grid synchronization. 
+- 2) set Op_St1 = 2 to  runs in droop mode.
+- 3) set Droop_P.flag_pri_Value = 1 to start the controller 1.
+![DSP1 Setting](./DSPSetting1.JPG)
+![PrimaryControl](./PrimaryControl.JGP)
 - **Grid Synchronization**: Start inverters #2, #3, and #4 with grid synchronization(plug in).
-- **Activate Secondary Control**: Activate secondary control on all the inverters.
+- 1) set Droop_P.idx_Value  = 2 to define the ID of second inverter. Then set Droop_P.flag_pri_Value = 1 to start the controller 2.
+![DSPSetting2](./DSPSetting2.JPG)
+- 2) set Droop_P.idx_Value  = 3 to define the ID of second inverter. Then set Droop_P.flag_pri_Value = 1 to start the controller 2.
+![DSPSetting3](./DSPSetting3.JPG)
+- 3) set Droop_P.idx_Value  = 4 to define the ID of second inverter. Then set Droop_P.flag_pri_Value = 1 to start the controller 4.
+![DSPSetting4](./DSPSetting4.JPG)
+- Note that the grid synchronization of inverter 2,3,4 need certain time (around 10s).
 
+- **Activate Secondary Control**: Activate secondary control on all the inverters.
+set Droop_P.flag_sec_Value = 1 in controller 1 to activate secondary control. All the controller will start secondary control once the first one is activated.
+![SecondaryControl](./SecondaryControl.JGP)
