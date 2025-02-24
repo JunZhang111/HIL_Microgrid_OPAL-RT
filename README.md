@@ -9,16 +9,17 @@ See [system description](https://junzhang111.github.io/HIL_Microgrid_OPAL-RT/) f
 
 ---
 
-## Folder Simulink
-- **slx**: The model for RT-LAB with OP5707XG.
-- **ini**: The file for initialization.
-- **Excel**: The file for load change.
+## Folder OPAL-RT
+- **eHStest.slx**: The model for RT-LAB with OP5707XG.
+- **VC707_2-EX-0001-3_5_0_817-eHSx128m_Gen4_C0D8FBCEC0D8FBCE-4F-31.conf**: the channel mapping file for OP5707XG. Note that two special DB 37 cables are required for splitting 32 analog channels into two 16 channels.
+- **Two_Level_Inverter_params.m**: The file for system initialization.
+- **Circuit_4DG_LC.slx.xlsx**: The file for scenarios such as load changes.
 
 ---
 
 ## Folder DSP
-- **.map and .out**: the files for DSP controller OP8666. 
-
+- **Droop.map and Droop.out**: the compiled code for DSP controller OP8666 on CPU1 with both primary control and secondary control. 
+- **VfController_zj_cpu3.map and VfController_zj_cpu3.out**: the compiled code for DSP controller OP8666 on CPU2 with clockwise communication. 
 ---
 ## Real-time Simulation Steps (Opal-rt side)
 - **Please refer to the [RT-LAB tutorial video](https://www.opal-rt.com/opal_tutorial/startup-rtlab/) on Opal-rt website**. 
