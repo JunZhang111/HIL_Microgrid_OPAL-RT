@@ -5,7 +5,7 @@
 ---
 
 ## System Description
-See [Download the detailed system description PDF](HILSystem.pdf) for an overview.
+**(Important!!) See [System Description](HILSystem.pdf) for a system overview.**
 
 ---
 ## Softwares Version
@@ -38,19 +38,22 @@ See [Download the detailed system description PDF](HILSystem.pdf) for an overvie
 ## Real-time Simulation Steps (DSP side)
 - **Code Flashing**: See [page for OP8666 on Opal-rt wiki](https://opal-rt.atlassian.net/wiki/spaces/PHDGD/pages/144718233/OP8666+DSP+Controller+Board).
 - **Black Start**: Start the inverter #1 without grid synchronization,:
-- 1) set Droop_DW.flag_Syn = 1 to skip grid synchronization. 
-- 2) set Op_St1 = 2 to  run in droop mode.
-- 3) set Droop_P.flag_pri_Value = 1 to start the controller 1.
+- 1) Set Droop_DW.flag_Syn = 1 to skip grid synchronization. 
+- 2) Set Op_St1 = 2 to  run in droop mode.
+- 3) Set Droop_P.flag_pri_Value = 1 to start the controller 1.
 ![DSP1 Setting](DSPSetting1.JPG)
 ![PrimaryControl](PrimaryControl.JPG)
 - **Grid Synchronization**: Start inverters #2, #3, and #4 with grid synchronization(plug in).
-- 1) set Droop_P.idx_Value  = 2 to define the ID of the second inverter. Then set Droop_P.flag_pri_Value = 1 to start the controller 2.
+- 1) Set Droop_P.idx_Value  = 2 to define the ID of the second inverter. 
 ![DSPSetting2](DSPSetting2.JPG)
-- 2) set Droop_P.idx_Value  = 3 to define the ID of the third inverter. Then set Droop_P.flag_pri_Value = 1 to start the controller 2.
+- 2) Then set Droop_P.flag_pri_Value = 1 to start the controller 2.
+- 3) Set Droop_P.idx_Value  = 3 to define the ID of the third inverter. 
 ![DSPSetting3](DSPSetting3.JPG)
-- 3) set Droop_P.idx_Value  = 4 to define the ID of the fourth inverter. Then set Droop_P.P1_rated = 2600 Droop_P.Q1_rated = 2600 to change power rating. Set  Droop_P.flag_pri_Value = 1 to start the controller 4.
+- 4) Then set Droop_P.flag_pri_Value = 1 to start the controller 2.
+- 5) Set Droop_P.idx_Value  = 4 to define the ID of the fourth inverter. Then set Droop_P.P1_rated = 2600 Droop_P.Q1_rated = 2600 to change power rating. 
 ![DSPSetting4](DSPSetting4.JPG)
-- Note that the grid synchronization of inverter 2,3,4 needs certain time (around 10s).
+- 6) Set Droop_P.flag_pri_Value = 1 to start the controller 4.
+- Note that the grid synchronization of inverter 2,3,4 needs a certain time (around 10s).
 
 - **Activate Secondary Control**: Activate secondary control on all the inverters.
 set Droop_P.flag_sec_Value = 1 in controller 1 to activate secondary control. All the controllers will start secondary control once the first one is activated.
