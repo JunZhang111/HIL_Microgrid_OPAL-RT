@@ -5,8 +5,9 @@
 ---
 
 ## System Description
-**(Important!!) See [System Description](HILSystem.pdf) for a system overview.**
-
+**(Important!!) See [System Description](HILSystem.pdf) for more details.**
+- A HIL testbed for microgrid based on OPAL-RT.  
+![System Overview](HILSystem_Page_03.JPG)
 ---
 ## Softwares Version
 - Matlab: 2020b
