@@ -1,4 +1,4 @@
-## The Hardware-in-the-loop Testbed for Microgrid based on Opal-rt
+## The Hardware-in-the-loop Testbed for Microgrid based on OPAL-RT
 **Author:** Jun Zhang  
 **Update:** 02/23/2025 first upload 
 
@@ -9,7 +9,7 @@
 - A HIL testbed for microgrid based on OPAL-RT.  
 ![System Overview](HILSystem_Page_03.jpg)
 ---
-## Softwares Version
+## Software Version
 - Matlab: 2020b
 - RTLAB: 2023.1.0.533
 - CCS: V12.7.1.00001 with compiler TI v22.6.1.LTS
@@ -34,7 +34,7 @@
 - **VfController_zj_cpu3.map and VfController_zj_cpu3.out**: the compiled code for DSP CPU2 with clockwise communication. 
 ---
 ## Real-time Simulation Steps (Opal-rt side)
-- **Please refer to the [RT-LAB tutorial video](https://www.opal-rt.com/opal_tutorial/startup-rtlab/) on Opal-rt website**. 
+- **Please refer to the [RT-LAB tutorial video](https://www.opal-rt.com/opal_tutorial/startup-rtlab/) on OPAL-RT website**. 
 ---
 ## Real-time Simulation Steps (DSP side)
 - **Code Flashing**: See [page for OP8666 on Opal-rt wiki](https://opal-rt.atlassian.net/wiki/spaces/PHDGD/pages/144718233/OP8666+DSP+Controller+Board).
@@ -51,7 +51,7 @@
 - 3) Set Droop_P.idx_Value  = 3 to define the ID of the third inverter. 
 ![DSPSetting3](DSPSetting3.JPG)
 - 4) Then set Droop_P.flag_pri_Value = 1 to start the controller 2.
-- 5) Set Droop_P.idx_Value  = 4 to define the ID of the fourth inverter. Then set Droop_P.P1_rated = 2600 Droop_P.Q1_rated = 2600 to change power rating. 
+- 5) Set Droop_P.idx_Value  = 4 to define the ID of the fourth inverter. Then set Droop_P.P1_rated = 2600 Droop_P.Q1_rated = 2600 to change the power rating. 
 ![DSPSetting4](DSPSetting4.JPG)
 - 6) Set Droop_P.flag_pri_Value = 1 to start the controller 4.
 - Note that the grid synchronization of inverter 2,3,4 needs a certain time (around 10s).
