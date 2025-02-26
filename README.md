@@ -5,7 +5,7 @@
 ---
 
 ## System Description
-**(Important!!) See [System Description](HILSystem.pdf) for more details.**
+**(Important!!) See [System Description]([HILSystem.pdf](https://github.com/JunZhang111/HIL_Microgrid_OPAL-RT/blob/main/HILSystem.pdf)) for more details.**
 - A HIL testbed for microgrid based on OPAL-RT.  
 ![System Overview](HILSystem_Page_03.jpg)
 ---
