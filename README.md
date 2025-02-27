@@ -67,7 +67,7 @@
 - 5) Set Droop_P.idx_Value  = 4 to define the ID of the fourth inverter. Then set Droop_P.P1_rated = 2600 Droop_P.Q1_rated = 2600 to change the power rating. 
 ![DSPSetting4](DSPSetting4.JPG)
 - 6) Set Droop_P.flag_pri_Value = 1 to start the controller 4.
-- Note that the grid synchronization of inverter 2,3,4 needs a certain time (around 10s).
+- Note that the grid synchronization of inverter 2,3,4 takes a certain time (around 10s).
 
 - **Activate Secondary Control**: Activate secondary control on all the inverters.
 set Droop_P.flag_sec_Value = 1 in controller 1 to activate secondary control. All the controllers will start secondary control once the first one is activated.
