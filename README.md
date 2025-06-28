@@ -8,7 +8,7 @@
 
 ---
 
-## ✨ System Description
+## System Description
 
 > A HIL testbed for microgrid based on OPAL-RT.
 
@@ -16,13 +16,13 @@
 
 ---
 
-## 🖥️ Simulator
+## Simulator
 
 ![Simulator](Slide25.JPG)
 
 ---
 
-## 🛠️ Controls
+## Controls
 
 - **Primary control:** Droop control [[1]](#references)  
 - **Secondary control:** Optimal distributed control [[2]](#references)  
@@ -31,7 +31,7 @@
 
 ---
 
-## 💻 Software Version
+## Software Version
 
 | Software | Version |
 |-----------|----------|
@@ -41,7 +41,7 @@
 
 ---
 
-## 🧰 Required Hardware
+## Required Hardware
 
 - **OPAL-RT simulator:** OP5707XG  
 - **DSP controller:** Four OP8666 units  
@@ -51,32 +51,32 @@
 
 ---
 
-## 🌐 Communication
+## Communication
 
 ![Communication](Slide27.JPG)
 
 ---
 
-## 🧵 Cores Assignment
+## Cores Assignment
 
 ![Cores Assignment](Slide28.JPG)
 
 ---
 
-## ⚡ Simulation: Black Start and Droop Mode
+## Simulation: Black Start and Droop Mode
 
 ![Black start and droop mode](Slide29.JPG)
 
 ---
 
-## ⚡ Simulation: System under Optimal Control
+## Simulation: System under Optimal Control
 
 ![System under optimal control - 1](Slide30.JPG)  
 ![System under optimal control - 2](Slide31.JPG)  
 
 ---
 
-## 📚 References
+## References
 
 [1] N. Pogaku, M. Prodanovic, and T. C. Green, "Modeling, Analysis and Testing of Autonomous Operation of an Inverter-Based Microgrid," *IEEE Transactions on Power Electronics*, vol. 22, no. 2, pp. 613–625, Mar. 2007.  
 
