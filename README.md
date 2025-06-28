@@ -45,6 +45,7 @@
 
 - **OPAL-RT simulator:** OP5707XG  
 - **DSP controller:** Four OP8666 units  
+- **Communication:** optical fiber
 - **Others:**  
   - Host PC  
   - Four PCs to control DSPs for black start and grid synchronization  
