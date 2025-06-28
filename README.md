@@ -33,3 +33,20 @@
 - DSP controller: four OP8666
 - Others: host PC, four PC to control DSP for black start and grid synchronization
 ---
+
+## Communication
+![Communication](Slide27.JPG)
+---
+
+## Cores assignment
+![Communication](Slide28.JPG)
+---
+
+## Simulation-Black start and droop mode
+![Black start and droop mode](Slide29.JPG)
+---
+
+## Simulation-System under optimal control
+![System under optimal control1](Slide30.JPG)
+![System under optimal control1](Slide31.JPG)
+---
