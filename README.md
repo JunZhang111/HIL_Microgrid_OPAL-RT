@@ -1,11 +1,12 @@
 ## The Hardware-in-the-loop Testbed for Microgrid based on OPAL-RT
 **Author:** Jun Zhang  
+**Email::** jun.zhang@jacks.sdstate.edu
 **Update:** 02/23/2025 first upload 
 
 ---
 
 ## System Description
-**See [HILSystem.pdf](https://github.com/JunZhang111/HIL_Microgrid_OPAL-RT/blob/main/HILSystem.pdf) for more details.**
+<!-- **See [HILSystem.pdf](https://github.com/JunZhang111/HIL_Microgrid_OPAL-RT/blob/main/HILSystem.pdf) for more details.** -->
 - A HIL testbed for microgrid based on OPAL-RT.  
 ![System Overview](Slide24.JPG)
 ---
