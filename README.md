@@ -77,8 +77,7 @@
 ---
 
 ## References
-
 [1] N. Pogaku, M. Prodanovic, and T. C. Green, "Modeling, Analysis and Testing of Autonomous Operation of an Inverter-Based Microgrid," *IEEE Transactions on Power Electronics*, vol. 22, no. 2, pp. 613–625, Mar. 2007.  
-
 [2] S. M. Mohiuddin and J. Qi, "Optimal Distributed Control of AC Microgrids With Coordinated Voltage Regulation and Reactive Power Sharing," *IEEE Transactions on Smart Grid*, vol. 13, no. 3, pp. 1789–1800, May 2022. 
+
 ---
